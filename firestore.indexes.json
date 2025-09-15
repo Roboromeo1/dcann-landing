@@ -1,0 +1,33 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "contact-submissions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "contact-submissions",
+      "queryScope": "COLLECTION", 
+      "fields": [
+        {
+          "fieldPath": "interest",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

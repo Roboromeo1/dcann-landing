@@ -1,0 +1,16 @@
+{
+  "name": "DCANNAI - Sustainable AI Solutions",
+  "short_name": "DCANNAI",
+  "description": "Eco-friendly AI solutions for trading, farming, and retail",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#00ff88",
+  "background_color": "#0d0d0d",
+  "display": "standalone",
+  "start_url": "/"
+}

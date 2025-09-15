@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Contact submissions - allow create for everyone, read/write for authenticated users only
+    match /contact-submissions/{document} {
+      allow create: if true; // Anyone can submit the form
+      allow read, update, delete: if request.auth != null; // Only authenticated users can manage
+    }
+    
+    // Future: AI predictions, user data, etc.
+    match /ai-predictions/{document} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Future: Sustainability metrics
+    match /sustainability-metrics/{document} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
