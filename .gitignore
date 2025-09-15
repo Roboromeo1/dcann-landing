@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
+.env.production
 
 # vercel
 .vercel
@@ -39,3 +41,69 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+database-debug.log
+auth_export/
+firestore_export/
+functions/lib/
+functions/node_modules/
+functions/.env
+functions/secrets.json
+firestore.rules.compiled
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# PWA files
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+tmp/
+temp/
