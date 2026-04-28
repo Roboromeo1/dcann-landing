@@ -1,79 +1,47 @@
+const routes = [
+  {
+    title: 'Chess platform',
+    detail: 'Live play, coaching, puzzles, review, and user growth.'
+  },
+  {
+    title: 'School white label',
+    detail: 'Academy branded portals with learning, tournaments, and student progress.'
+  },
+  {
+    title: 'BioTrack',
+    detail: 'Preventive health, biomarkers, GLP 1 tracking, and medical record workflows.'
+  },
+  {
+    title: 'Research programs',
+    detail: 'Organic farming AI, gene therapy, genetic modification, and trading research.'
+  }
+];
+
 export default function ContactInfo() {
   return (
-    <div className="space-y-8">
-      <div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-100 mb-4">Get in Touch</h2>
-        <p className="text-gray-300 leading-relaxed">
-          We&apos;re here to answer your questions about sustainable AI solutions and how they can 
-          transform your business operations.
+    <div className="space-y-5">
+      <div className="rounded-lg border border-black/10 bg-[#f5f5f7] p-6">
+        <h2 className="text-2xl font-semibold text-[#1d1d1f]">Where enquiries go</h2>
+        <p className="mt-3 text-base leading-7 text-[#515154]">
+          Submissions are saved to the new DCANNAI contact backend and reviewed from the admin panel. Add context so the first reply can be specific.
         </p>
       </div>
-      
-      <div className="space-y-8">
-        <div className="flex items-start space-x-4">
-          <div className="text-3xl">📧</div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-100 mb-2">Email Us</h3>
-            <a 
-              href="mailto:hello@dcannai.com" 
-              className="text-blue-400 hover:text-accent font-medium transition-colors"
-            >
-              hello@dcannai.com
-            </a>
-            <p className="text-gray-300 text-sm mt-1">We typically respond within 24 hours</p>
+
+      <div className="grid gap-3">
+        {routes.map((route) => (
+          <div key={route.title} className="rounded-lg border border-black/10 bg-white p-5">
+            <h3 className="text-lg font-semibold text-[#1d1d1f]">{route.title}</h3>
+            <p className="mt-2 text-sm leading-6 text-[#6e6e73]">{route.detail}</p>
           </div>
-        </div>
-        
-        <div className="flex items-start space-x-4">
-          <div className="text-3xl">🌏</div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-100 mb-2">Based in Melbourne</h3>
-            <p className="text-gray-300">Victoria, Australia</p>
-            <p className="text-gray-300 text-sm">Serving clients globally</p>
-          </div>
-        </div>
-        
-        <div className="flex items-start space-x-4">
-          <div className="text-3xl">💼</div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-100 mb-2">LinkedIn</h3>
-            <a 
-              href="https://www.linkedin.com/in/adhityaram/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-accent font-medium transition-colors"
-            >
-              Connect with our founder
-            </a>
-            <p className="text-gray-300 text-sm mt-1">Professional network & updates</p>
-          </div>
-        </div>
+        ))}
       </div>
-      
-      <div className="bg-blue-500/20 p-6 rounded-2xl border border-blue-400/30">
-        <h3 className="text-xl font-semibold text-gray-100 mb-4">What to Expect</h3>
-        <ul className="space-y-3">
-          {[
-            'Initial response within 24 hours',
-            'Detailed project assessment',
-            'Custom solution proposal',
-            'Transparent pricing & timeline',
-            'Environmental impact analysis'
-          ].map((item, index) => (
-            <li key={index} className="flex items-start space-x-3">
-              <span className="text-accent">✅</span>
-              <span className="text-gray-300">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="card-dark p-6 rounded-2xl border border-gray-700 text-center">
-        <h3 className="text-xl font-semibold text-gray-100 mb-3">Ready to Get Started?</h3>
-        <p className="text-gray-300 leading-relaxed">
-          Join the growing community of businesses using sustainable AI to drive positive change 
-          while achieving their goals.
-        </p>
+
+      <div className="rounded-lg border border-black/10 bg-[#1d1d1f] p-6 text-white">
+        <h3 className="text-xl font-semibold">Direct email</h3>
+        <a href="mailto:hello@dcannai.com" className="mt-3 inline-block text-base font-semibold text-white/90 hover:text-white">
+          hello@dcannai.com
+        </a>
+        <p className="mt-3 text-sm leading-6 text-white/60">Melbourne, Australia. Working with customers and partners globally.</p>
       </div>
     </div>
   );

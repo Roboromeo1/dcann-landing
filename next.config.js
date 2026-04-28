@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['dcannai.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'dcannai.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.chesscomfiles.com',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   // Generate sitemap

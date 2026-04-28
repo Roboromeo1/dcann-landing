@@ -4,64 +4,69 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark-900 text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h4 className="text-lg font-semibold text-blue-400 mb-6">Solutions</h4>
-            <div className="space-y-3">
-              <Link href="/trading-ai" className="block text-gray-300 hover:text-blue-400 transition-colors">Trading AI</Link>
-              <Link href="/smart-farming" className="block text-gray-300 hover:text-blue-400 transition-colors">Smart Farming</Link>
-              <Link href="/retail-intelligence" className="block text-gray-300 hover:text-blue-400 transition-colors">Retail Intelligence</Link>
-              <Link href="/custom-solutions" className="block text-gray-300 hover:text-blue-400 transition-colors">Custom Solutions</Link>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold text-blue-400 mb-6">Company</h4>
-            <div className="space-y-3">
-              <Link href="/about" className="block text-gray-300 hover:text-blue-400 transition-colors">About Us</Link>
-              <Link href="/careers" className="block text-gray-300 hover:text-blue-400 transition-colors">Careers</Link>
-              <Link href="/sustainability" className="block text-gray-300 hover:text-blue-400 transition-colors">Sustainability</Link>
-              <Link href="/news" className="block text-gray-300 hover:text-blue-400 transition-colors">News</Link>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold text-blue-400 mb-6">Resources</h4>
-            <div className="space-y-3">
-              <Link href="/docs" className="block text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link>
-              <Link href="/api" className="block text-gray-300 hover:text-blue-400 transition-colors">API</Link>
-              <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link>
-              <Link href="/support" className="block text-gray-300 hover:text-blue-400 transition-colors">Support</Link>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold text-blue-400 mb-6">Connect</h4>
-            <div className="space-y-3">
-              <Link href="/contact" className="block text-gray-300 hover:text-blue-400 transition-colors">Contact</Link>
-              <a 
-                href="https://www.linkedin.com/company/dcann-ai/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-gray-300 hover:text-blue-400 transition-colors"
-              >
-                LinkedIn
-              </a>
-              <Link href="/twitter" className="block text-gray-300 hover:text-blue-400 transition-colors">Twitter</Link>
-              <Link href="/newsletter" className="block text-gray-300 hover:text-blue-400 transition-colors">Newsletter</Link>
-            </div>
+    <footer className="border-t border-black/10 bg-[#efede4] px-5 py-12 md:px-6">
+      <div className="mx-auto grid max-w-[1500px] gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
+        <div>
+          <Link href="/" className="text-lg font-semibold text-[#1d1d1f]">
+            DCANNAI
+          </Link>
+          <p className="mt-4 max-w-sm text-sm leading-6 text-[#6e6e73]">
+            Applied AI research and product studio building systems for chess learning, academy partnerships, preventive health, farming, genetics, and trading from Melbourne.
+          </p>
+          <p className="mt-6 text-sm text-[#86868b]">© {currentYear} DCANNAI. All rights reserved.</p>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-[#1d1d1f]">Products</h4>
+          <div className="mt-4 grid gap-3 text-sm text-[#6e6e73]">
+            <a href="https://chess.dcannai.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#1d1d1f]">
+              DCANNAI Chess
+            </a>
+            <a
+              href="https://chess.dcannai.com/s/velammal-chess-academy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#1d1d1f]"
+            >
+              Velammal Academy
+            </a>
+            <a href="https://biotrack.dcannai.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#1d1d1f]">
+              BioTrack
+            </a>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p className="mb-2">
-            &copy; {currentYear} DCANNAI.com. Building a sustainable future with AI.
-          </p>
-          <p className="text-accent font-medium italic">
-            Made with ❤️ from Melbourne
-          </p>
+
+        <div>
+          <h4 className="text-sm font-semibold text-[#1d1d1f]">Company</h4>
+          <div className="mt-4 grid gap-3 text-sm text-[#6e6e73]">
+            <Link href="/about" className="hover:text-[#1d1d1f]">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-[#1d1d1f]">
+              Contact
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/adhityaram/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#1d1d1f]"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-[#1d1d1f]">Contact</h4>
+          <div className="mt-4 grid gap-3 text-sm text-[#6e6e73]">
+            <a href="mailto:hello@dcannai.com" className="hover:text-[#1d1d1f]">
+              hello@dcannai.com
+            </a>
+            <span>Melbourne, Australia</span>
+            <Link href="/#contact" className="hover:text-[#1d1d1f]">
+              Book a demo
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

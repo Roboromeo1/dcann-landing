@@ -1,32 +1,28 @@
 export default function AboutHero() {
   return (
-    <section className="pt-32 pb-20 px-6 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-8">
-          <span className="text-gray-100">
-            Building AI for a{' '}
-          </span>
-          <span className="text-gradient-brand">
-            Sustainable Future
-          </span>
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-          We believe technology should heal our planet, not harm it. That&apos;s why we&apos;re pioneering 
-          self-hosted, eco-friendly AI solutions that deliver powerful results without the environmental cost.
+    <section className="bg-[#f5f5f7] px-6 pb-16 pt-28 text-center md:pb-20 md:pt-36">
+      <div className="mx-auto max-w-5xl">
+        <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#6e6e73]">
+          About DCANNAI
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div className="card-dark p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all duration-300 card-dark-hover">
-            <div className="text-3xl md:text-4xl font-extrabold text-blue-400 mb-2">90%</div>
-            <div className="text-gray-300 font-medium">Less Energy Consumption</div>
-          </div>
-          <div className="card-dark p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all duration-300 card-dark-hover">
-            <div className="text-3xl md:text-4xl font-extrabold text-blue-400 mb-2">Zero</div>
-            <div className="text-gray-300 font-medium">Cloud Dependency</div>
-          </div>
-          <div className="card-dark p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all duration-300 card-dark-hover">
-            <div className="text-3xl md:text-4xl font-extrabold text-blue-400 mb-2">100%</div>
-            <div className="text-gray-300 font-medium">Self-Hosted</div>
-          </div>
+        <h1 className="text-balance text-5xl font-semibold leading-tight text-[#1d1d1f] md:text-7xl">
+          An AI research studio for practical systems.
+        </h1>
+        <p className="mx-auto mt-6 max-w-3xl text-xl leading-8 text-[#515154] md:text-2xl md:leading-9">
+          DCANNAI focuses on domains where AI can make complex work clearer: chess learning, school academy operations, personal health, organic farming, genetics, and trading.
+        </p>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          {[
+            ['Chess', 'Play, learn, review, and coach'],
+            ['Health', 'BioTrack preventive health records'],
+            ['Research', 'Farming, genetics, and trading AI']
+          ].map(([title, detail]) => (
+            <div key={title} className="rounded-lg border border-black/10 bg-white p-6">
+              <h2 className="text-2xl font-semibold text-[#1d1d1f]">{title}</h2>
+              <p className="mt-3 text-sm leading-6 text-[#6e6e73]">{detail}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

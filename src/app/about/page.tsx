@@ -7,11 +7,11 @@ import Values from '@/components/about/Values';
 import Team from '@/components/about/Team';
 
 export const metadata: Metadata = {
-  title: "About Us - DCANNAI | Eco-Friendly AI Solutions",
-  description: "Learn about DCANNAI's mission to build self-hosted, eco-friendly AI solutions that don't rely on GPU-intensive tasks. We're at the forefront of AI research for sustainable technology.",
+  title: "About DCANNAI | AI Product Studio",
+  description: "Learn about DCANNAI, the AI research studio behind DCANNAI Chess, Velammal Chess Academy, BioTrack, farming AI, genetics research, and trading AI.",
   openGraph: {
-    title: "About DCANNAI - Sustainable AI Innovation",
-    description: "Building self-hosted, eco-friendly AI solutions for a better tomorrow",
+    title: "About DCANNAI",
+    description: "AI research studio for chess, schools, health, farming, genetics, and trading.",
     url: "https://dcannai.com/about",
   },
 };

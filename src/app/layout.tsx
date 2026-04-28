@@ -7,11 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://dcannai.com'),
   title: {
-    default: "DCANNAI - Sustainable AI Solutions for Trading, Farming & Retail",
+    default: "DCANNAI - Applied AI Research and Development",
     template: "%s | DCANNAI"
   },
-  description: "Revolutionary eco-friendly AI solutions reducing carbon footprint by 85%. Self-hosted sustainable technology for ESG trading, precision farming, and zero-waste retail.",
-  keywords: ["sustainable AI", "eco-friendly technology", "ESG trading", "AI trading platform", "smart farming", "precision agriculture", "green retail", "carbon neutral AI", "environmental AI solutions", "self-hosted AI", "edge computing", "zero waste technology"],
+  description: "DCANNAI is an applied AI research and development company building intelligence systems for chess, schools, preventive health, organic farming, genetics, and trading.",
+  keywords: ["DCANNAI", "AI chess platform", "chess coaching", "school chess academy", "Velammal Chess Academy", "BioTrack", "preventive health app", "biomarker tracking", "organic farming AI", "gene therapy AI", "genetic modification AI", "AI trading research"],
   authors: [{ name: "DCANNAI", url: "https://dcannai.com" }],
   creator: "DCANNAI",
   publisher: "DCANNAI",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DCANNAI - Sustainable AI Solutions",
-    description: "Eco-friendly AI reducing carbon footprint by 85%. Self-hosted solutions for trading, farming & retail.",
+    title: "DCANNAI - Applied AI Research and Development",
+    description: "Researching and shipping AI systems for reasoning, learning, health, farming, genetics, and trading.",
     url: "https://dcannai.com",
     siteName: "DCANNAI",
     locale: "en_US",
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'DCANNAI - Sustainable AI Solutions',
+        alt: 'DCANNAI AI products',
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DCANNAI - Sustainable AI Solutions",
-    description: "Eco-friendly AI reducing carbon footprint by 85%. Self-hosted solutions for trading, farming & retail.",
+    title: "DCANNAI - Applied AI R&D",
+    description: "AI systems for learning, health, farming, genetics, and trading.",
     images: ['/og-image.png'],
     creator: '@dcannai',
   },
@@ -61,13 +61,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
-        <meta name="theme-color" content="#00ff88" />
+        <meta name="theme-color" content="#f5f5f7" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <script
           type="application/ld+json"
@@ -79,7 +79,7 @@ export default function RootLayout({
               "alternateName": "DCANN AI",
               "url": "https://dcannai.com",
               "logo": "https://dcannai.com/favicon.svg",
-              "description": "Revolutionary eco-friendly AI solutions reducing carbon footprint by 85%. Self-hosted sustainable technology for ESG trading, precision farming, and zero-waste retail.",
+              "description": "DCANNAI is an applied AI research and development company building intelligence systems for chess, schools, preventive health, organic farming, genetics, and trading.",
               "foundingDate": "2024",
               "foundingLocation": {
                 "@type": "Place",
@@ -104,28 +104,35 @@ export default function RootLayout({
               ],
               "knowsAbout": [
                 "Artificial Intelligence",
-                "Sustainable Technology",
-                "ESG Trading",
-                "Precision Agriculture",
-                "Green Retail",
-                "Carbon Neutral AI"
+                "Chess Coaching",
+                "School Academy Platforms",
+                "Preventive Health Tracking",
+                "Biomarker Tracking",
+                "White Label Software",
+                "Organic Farming AI",
+                "Gene Therapy AI",
+                "Genetic Modification AI",
+                "AI Trading Research"
               ],
-              "slogan": "AI that puts planet first",
+              "slogan": "AI products that feel simple from the first click",
               "offers": [
                 {
-                  "@type": "Service",
-                  "name": "Sustainable Trading AI",
-                  "description": "ESG-compliant AI trading systems"
+                  "@type": "SoftwareApplication",
+                  "name": "DCANNAI Chess",
+                  "url": "https://chess.dcannai.com",
+                  "description": "Chess platform with live play, AI coaching, puzzles, and game review."
                 },
                 {
-                  "@type": "Service",
-                  "name": "Smart Farming Solutions",
-                  "description": "Precision agriculture AI technology"
+                  "@type": "SoftwareApplication",
+                  "name": "Velammal Chess Academy",
+                  "url": "https://chess.dcannai.com/s/velammal-chess-academy",
+                  "description": "White label academy portal for chess learning and tournaments."
                 },
                 {
-                  "@type": "Service",
-                  "name": "Green Retail Intelligence",
-                  "description": "Zero-waste retail AI solutions"
+                  "@type": "SoftwareApplication",
+                  "name": "BioTrack",
+                  "url": "https://biotrack.dcannai.com",
+                  "description": "Personal health record and biomarker tracking platform."
                 }
               ]
             })

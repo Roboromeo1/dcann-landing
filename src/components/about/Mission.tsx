@@ -1,86 +1,39 @@
+const principles = [
+  {
+    title: 'Make the first action obvious',
+    detail: 'Products should lead users to play, track, learn, or enquire without friction.'
+  },
+  {
+    title: 'Keep data ownership visible',
+    detail: 'Health, school, and research workflows need clear data boundaries, export paths, and trust building copy.'
+  },
+  {
+    title: 'Design for the partner brand',
+    detail: 'White label surfaces should feel native to the school or academy while keeping DCANNAI product quality.'
+  }
+];
+
 export default function Mission() {
   return (
-    <section className="py-20 px-6 bg-dark-800/50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8">Our Mission</h2>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              At DCANNAI, we&apos;re at the <strong className="text-blue-400">forefront of AI research</strong>, 
-              developing cutting-edge solutions that don&apos;t compromise our planet&apos;s future. Our self-hosted AI 
-              systems are designed to be environmentally responsible while delivering exceptional performance.
-            </p>
-            
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🌱</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-100 mb-2">Eco-First Approach</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    We build AI solutions that actively reduce carbon footprints rather than increasing them. 
-                    Our algorithms are optimized for efficiency, not GPU intensity.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🏠</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-100 mb-2">Self-Hosted Architecture</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Complete control over your data and infrastructure. No cloud dependencies, 
-                    no external data centers, no hidden environmental costs.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🎯</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-100 mb-2">Purpose-Driven Innovation</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Every solution we create serves a greater good - whether it&apos;s optimizing sustainable 
-                    trading, improving crop yields, or reducing retail waste.
-                  </p>
-                </div>
-              </div>
+    <section className="bg-white px-6 py-20 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#6e6e73]">Mission</p>
+          <h2 className="text-balance text-4xl font-semibold leading-tight text-[#1d1d1f] md:text-6xl">
+            Build AI products people understand immediately.
+          </h2>
+          <p className="mt-5 text-xl leading-8 text-[#515154]">
+            DCANNAI is not a generic AI agency. It is a research and product studio with live surfaces, real users, and a bias for polished user journeys.
+          </p>
+        </div>
+
+        <div className="grid gap-3">
+          {principles.map((principle) => (
+            <div key={principle.title} className="rounded-lg border border-black/10 bg-[#f5f5f7] p-6">
+              <h3 className="text-xl font-semibold text-[#1d1d1f]">{principle.title}</h3>
+              <p className="mt-3 text-base leading-7 text-[#515154]">{principle.detail}</p>
             </div>
-          </div>
-          
-          <div className="card-dark p-8 rounded-2xl border border-gray-700">
-            <h3 className="text-xl font-semibold text-center mb-8 text-gray-100">Traditional AI vs. DCANNAI</h3>
-            <div className="space-y-6">
-              {[
-                { label: 'Energy Usage', traditional: 100, ours: 10 },
-                { label: 'Carbon Footprint', traditional: 100, ours: 15 },
-                { label: 'GPU Dependency', traditional: 100, ours: 5 },
-              ].map((item, index) => (
-                <div key={index}>
-                  <div className="flex justify-between text-sm font-medium text-gray-300 mb-2">
-                    <span>{item.label}</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-3">
-                      <span className="text-xs text-gray-400 w-20">Traditional</span>
-                      <div className="flex-1 bg-red-900/20 rounded-full h-2">
-                        <div className="bg-red-500 h-2 rounded-full" style={{width: `${item.traditional}%`}}></div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <span className="text-xs text-gray-400 w-20">DCANNAI</span>
-                      <div className="flex-1 bg-blue-900/20 rounded-full h-2">
-                        <div className="bg-blue-500 h-2 rounded-full" style={{width: `${item.ours}%`}}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex justify-between mt-6 text-sm">
-              <span className="flex items-center text-gray-300"><span className="w-3 h-3 bg-red-500 rounded mr-2"></span>Traditional AI</span>
-              <span className="flex items-center text-gray-300"><span className="w-3 h-3 bg-blue-500 rounded mr-2"></span>DCANNAI</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
