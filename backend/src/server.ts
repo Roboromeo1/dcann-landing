@@ -7,6 +7,7 @@ import { z } from 'zod';
 import { renderAdminPage } from './adminPage.js';
 import {
   createContact,
+  deleteContact,
   initDatabase,
   listContacts,
   pool,
@@ -183,6 +184,17 @@ app.patch('/api/admin/submissions/:id', requireAdmin, async (req, res) => {
   }
 
   res.json({ submission: contact });
+});
+
+app.delete('/api/admin/submissions/:id', requireAdmin, async (req, res) => {
+  const contact = await deleteContact(req.params.id);
+
+  if (!contact) {
+    res.status(404).json({ error: 'Submission not found' });
+    return;
+  }
+
+  res.json({ ok: true, submission: contact });
 });
 
 app.use((_req, res) => {
