@@ -16,9 +16,8 @@ export default function BioTrackPamphletPage() {
       accentClassName="bg-[#eef7f1]"
       productUrl="https://biotrack.dcannai.com"
       visual={{
-        src: '/media/product/biotrack-home.png',
-        alt: 'BioTrack product landing page showing biomarkers, health records, GLP 1 tracking, and lifestyle goals',
-        caption: 'Actual BioTrack product surface'
+        variant: 'biotrack-dashboard',
+        caption: 'Dashboard style product surface rebuilt from the BioTrack app'
       }}
       metrics={[
         ['130+', 'Biomarkers'],
