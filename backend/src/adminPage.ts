@@ -120,6 +120,11 @@ export function renderAdminPage() {
         font-weight: 700;
       }
 
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.58;
+      }
+
       .leads {
         display: grid;
         gap: 12px;
@@ -133,6 +138,14 @@ export function renderAdminPage() {
         display: flex;
         justify-content: space-between;
         gap: 16px;
+      }
+
+      .lead-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
       }
 
       .lead h2 {
@@ -168,6 +181,12 @@ export function renderAdminPage() {
         white-space: pre-wrap;
       }
 
+      .delete-button {
+        background: #fff2f1;
+        border-color: rgba(180, 35, 24, 0.22);
+        color: #b42318;
+      }
+
       .empty {
         padding: 36px;
         text-align: center;
@@ -181,6 +200,11 @@ export function renderAdminPage() {
 
         .lead-head {
           display: block;
+        }
+
+        .lead-actions {
+          justify-content: flex-start;
+          margin-top: 12px;
         }
       }
     </style>
@@ -266,9 +290,12 @@ export function renderAdminPage() {
           return '<article class="lead">' +
             '<div class="lead-head">' +
               '<div><h2>' + escapeHtml(lead.name) + '</h2><a href="mailto:' + encodeURIComponent(lead.email) + '">' + escapeHtml(lead.email) + '</a></div>' +
-              '<select data-id="' + lead.id + '" data-status>' +
-                statuses.map((status) => '<option value="' + status + '"' + (status === lead.status ? " selected" : "") + '>' + status + '</option>').join("") +
-              '</select>' +
+              '<div class="lead-actions">' +
+                '<select data-id="' + lead.id + '" data-status>' +
+                  statuses.map((status) => '<option value="' + status + '"' + (status === lead.status ? " selected" : "") + '>' + status + '</option>').join("") +
+                '</select>' +
+                '<button class="delete-button" data-id="' + lead.id + '" data-name="' + escapeHtml(lead.name) + '" data-delete>Delete</button>' +
+              '</div>' +
             '</div>' +
             '<div class="meta">' + fields.map((field) => '<span class="pill">' + escapeHtml(field) + '</span>').join("") + '</div>' +
             '<p class="message">' + escapeHtml(lead.message) + '</p>' +
@@ -294,6 +321,30 @@ export function renderAdminPage() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ status: target.value })
         });
+        await loadLeads();
+      });
+
+      leadsEl.addEventListener("click", async (event) => {
+        const target = event.target;
+        if (!target.matches("[data-delete]")) return;
+        const leadName = target.dataset.name || "this lead";
+        const confirmed = window.confirm("Delete " + leadName + " permanently? This removes the lead from the admin database and cannot be undone.");
+        if (!confirmed) return;
+
+        target.disabled = true;
+        target.textContent = "Deleting...";
+
+        const response = await fetch("/api/admin/submissions/" + target.dataset.id, {
+          method: "DELETE"
+        });
+
+        if (!response.ok) {
+          target.disabled = false;
+          target.textContent = "Delete";
+          window.alert("Unable to delete this lead. Please refresh and try again.");
+          return;
+        }
+
         await loadLeads();
       });
 

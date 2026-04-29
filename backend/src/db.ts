@@ -180,3 +180,16 @@ export async function updateContactStatus(id: string, status: ContactStatus) {
 
   return result.rows[0] ?? null;
 }
+
+export async function deleteContact(id: string) {
+  const result = await pool.query<ContactSubmission>(
+    `
+      DELETE FROM contact_submissions
+      WHERE id = $1
+      RETURNING *
+    `,
+    [id]
+  );
+
+  return result.rows[0] ?? null;
+}
