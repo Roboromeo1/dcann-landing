@@ -165,7 +165,7 @@ function ProductShowcase({
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/[0.46]">
               {eyebrow}
             </p>
-            <h3 className="mt-8 text-balance text-[clamp(2.6rem,4.8vw,5.7rem)] font-semibold leading-[0.96] tracking-normal">
+            <h3 className="mt-8 text-balance text-[clamp(2.25rem,3.55vw,4.3rem)] font-semibold leading-[1.02] tracking-normal">
               {title}
             </h3>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/[0.64]">

@@ -3,10 +3,8 @@ import Link from 'next/link';
 const signals = [
   ['DCANNAI Chess', 'AI review and live board'],
   ['BioTrack', 'Health record intelligence'],
-  ['Velammal', 'School academy portal'],
   ['Organic farming', 'Crop and soil intelligence'],
-  ['Genetics', 'Gene therapy research systems'],
-  ['Trading', 'Market intelligence research']
+  ['Genetics', 'Gene therapy research systems']
 ];
 
 export default function Hero() {
@@ -79,7 +77,7 @@ export default function Hero() {
                 <div className="rounded-md bg-[#eef7f1] p-5 text-[#111111]">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/45">Research expansion</p>
                   <div className="mt-10 grid gap-2">
-                    {['Organic farming AI', 'Gene therapy AI', 'Trading AI'].map((item) => (
+                    {['Organic farming AI', 'Gene therapy AI', 'Genetic modification AI'].map((item) => (
                       <div key={item} className="rounded-md border border-black/10 bg-white px-3 py-2 text-sm font-semibold">
                         {item}
                       </div>

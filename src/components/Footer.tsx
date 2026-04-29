@@ -42,6 +42,9 @@ export default function Footer() {
             <Link href="/about" className="hover:text-[#1d1d1f]">
               About
             </Link>
+            <Link href="/team" className="hover:text-[#1d1d1f]">
+              Team
+            </Link>
             <Link href="/contact" className="hover:text-[#1d1d1f]">
               Contact
             </Link>
