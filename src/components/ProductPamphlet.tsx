@@ -74,8 +74,8 @@ export default function ProductPamphlet({
         `}</style>
         <div className="mx-auto max-w-[1280px]">
           <div className="no-print mb-6 flex flex-wrap items-center justify-between gap-3">
-            <Link href="/#pamphlets" className="text-sm font-semibold text-[#5c5952] hover:text-[#111111]">
-              Back to pamphlets
+            <Link href="/" className="text-sm font-semibold text-[#5c5952] hover:text-[#111111]">
+              Back to DCANNAI
             </Link>
             <PrintButton />
           </div>
