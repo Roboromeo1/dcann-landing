@@ -10,10 +10,17 @@ export default function ChessUniversePamphletPage() {
   return (
     <ProductPamphlet
       eyebrow="Chess Universe pamphlet"
+      productName="Chess Universe"
       title="Chess learning, live play, and academy operations in one AI system."
       subtitle="Chess Universe powers DCANNAI Chess experiences for students, players, coaches, and school partners who need training, review, tournaments, and academy workflows in one place."
       accentClassName="bg-[#f6d447]"
       productUrl="https://chess.dcannai.com"
+      visual={{
+        src: '/media/product/chess-dashboard.png',
+        alt: 'Chess Universe product dashboard showing live chess play, AI coach, board themes, and player controls',
+        caption: 'Actual Chess Universe dashboard view',
+        objectPosition: 'left top'
+      }}
       metrics={[
         ['AI', 'Coach'],
         ['Live', 'Play'],
@@ -44,6 +51,16 @@ export default function ChessUniversePamphletPage() {
             'Built around real product surfaces, not a static landing page or disconnected chess tools.',
             'Designed to scale from a single academy to a multi school learning and competition ecosystem.'
           ]
+        }
+      ]}
+      proof={[
+        {
+          label: 'Already in academy use',
+          detail: 'The platform supports the Velammal Chess Academy white label workflow with student, tournament, and coaching surfaces.'
+        },
+        {
+          label: 'Built from real chess flows',
+          detail: 'Live boards, queue states, review, analysis, and coaching tools are shown as product surfaces instead of abstract diagrams.'
         }
       ]}
     />

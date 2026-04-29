@@ -10,10 +10,16 @@ export default function BioTrackPamphletPage() {
   return (
     <ProductPamphlet
       eyebrow="BioTrack pamphlet"
+      productName="BioTrack"
       title="Preventive health intelligence with the full record in context."
       subtitle="BioTrack turns scattered lab results, biomarkers, lifestyle goals, and medical history into a clean health memory for review, export, and ongoing prevention."
       accentClassName="bg-[#eef7f1]"
       productUrl="https://biotrack.dcannai.com"
+      visual={{
+        src: '/media/product/biotrack-home.png',
+        alt: 'BioTrack product landing page showing biomarkers, health records, GLP 1 tracking, and lifestyle goals',
+        caption: 'Actual BioTrack product surface'
+      }}
       metrics={[
         ['130+', 'Biomarkers'],
         ['24/7', 'Health memory'],
@@ -44,6 +50,16 @@ export default function BioTrackPamphletPage() {
             'Built for fast review, simple exports, and a calm interface people can return to repeatedly.',
             'Extensible into partner workflows for health intelligence, reporting, and research programs.'
           ]
+        }
+      ]}
+      proof={[
+        {
+          label: 'Designed for repeat review',
+          detail: 'The interface keeps the most important health signals visible without asking users to decode raw lab reports.'
+        },
+        {
+          label: 'Ready for client handoff',
+          detail: 'The pamphlet gives clinics, coaches, and individual users a fast way to understand the product before a demo.'
         }
       ]}
     />
