@@ -12,14 +12,12 @@ export default function ChessUniversePamphletPage() {
       eyebrow="Chess Universe pamphlet"
       productName="Chess Universe"
       title="Chess learning, live play, and academy operations in one AI system."
-      subtitle="Chess Universe powers DCANNAI Chess experiences for students, players, coaches, and school partners who need training, review, tournaments, and academy workflows in one place."
+      subtitle="Chess Universe powers DCANNAI Chess and Velammal academy experiences for students, players, coaches, and school partners who need training, review, tournaments, and academy workflows in one place."
       accentClassName="bg-[#f6d447]"
       productUrl="https://chess.dcannai.com"
       visual={{
-        src: '/media/product/chess-dashboard.png',
-        alt: 'Chess Universe product dashboard showing live chess play, AI coach, board themes, and player controls',
-        caption: 'Actual Chess Universe dashboard view',
-        objectPosition: 'left top'
+        variant: 'velammal-academy',
+        caption: 'Velammal academy portal surface rebuilt from the Chess app'
       }}
       metrics={[
         ['AI', 'Coach'],

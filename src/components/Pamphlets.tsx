@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import ProductSurface, { type ProductVisualVariant } from '@/components/ProductVisuals';
 
 const pamphlets = [
   {
@@ -11,9 +11,7 @@ const pamphlets = [
     points: ['130+ biomarkers', 'Health record memory', 'Shareable exports', 'Review flags'],
     accent: 'bg-[#eef7f1]',
     badge: 'Health',
-    image: '/media/product/biotrack-home.png',
-    imageAlt: 'BioTrack product landing page screenshot',
-    objectPosition: 'center top'
+    visual: 'biotrack-dashboard' as ProductVisualVariant
   },
   {
     product: 'Chess Universe',
@@ -24,9 +22,7 @@ const pamphlets = [
     points: ['AI coach', 'Live play', 'Puzzles', 'Academy portals'],
     accent: 'bg-[#f6d447]',
     badge: 'Chess',
-    image: '/media/product/chess-dashboard.png',
-    imageAlt: 'Chess Universe dashboard screenshot',
-    objectPosition: 'left top'
+    visual: 'velammal-academy' as ProductVisualVariant
   }
 ];
 
@@ -66,18 +62,11 @@ export default function Pamphlets() {
                   </span>
                 </div>
                 <div className="flex flex-col justify-between p-5 sm:p-7">
-                  <div className="relative min-h-[220px] overflow-hidden rounded-lg border border-black/[0.08] bg-[#111111] shadow-inner">
-                    <Image
-                      src={pamphlet.image}
-                      alt={pamphlet.imageAlt}
-                      fill
-                      sizes="(min-width: 1024px) 35vw, 90vw"
-                      className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
-                      style={{ objectPosition: pamphlet.objectPosition }}
-                    />
+                  <div className="relative overflow-hidden rounded-lg border border-black/[0.08] bg-[#111111] shadow-inner transition duration-500 group-hover:scale-[1.02]">
+                    <ProductSurface variant={pamphlet.visual} compact />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
-                        Actual product image
+                        Product surface preview
                       </p>
                     </div>
                   </div>

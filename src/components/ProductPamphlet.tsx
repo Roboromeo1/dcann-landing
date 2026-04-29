@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PrintButton from '@/components/PrintButton';
+import ProductSurface, { type ProductVisualVariant } from '@/components/ProductVisuals';
 
 type ProductPamphletProps = {
   eyebrow: string;
@@ -11,10 +11,8 @@ type ProductPamphletProps = {
   subtitle: string;
   accentClassName: string;
   visual: {
-    src: string;
-    alt: string;
+    variant: ProductVisualVariant;
     caption: string;
-    objectPosition?: string;
   };
   metrics: Array<[string, string]>;
   sections: Array<{
@@ -83,36 +81,28 @@ export default function ProductPamphlet({
           </div>
 
           <article className="pamphlet-document overflow-hidden rounded-lg border border-black/[0.10] bg-[#f9f7ef] shadow-[0_32px_100px_rgba(0,0,0,0.12)]">
-            <section className={`print-avoid-break grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.88fr_1.12fr] lg:p-10 ${accentClassName}`}>
+            <section className={`print-avoid-break grid gap-7 p-6 sm:p-8 lg:grid-cols-[0.72fr_1.28fr] lg:p-10 ${accentClassName}`}>
               <div className="flex flex-col justify-between">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-black/55">{eyebrow}</p>
-                  <p className="mt-10 text-lg font-semibold text-black/60">{productName}</p>
-                  <h1 className="mt-4 max-w-3xl text-balance text-[clamp(3rem,6vw,6.35rem)] font-semibold leading-[0.95] tracking-normal">
+                  <p className="mt-8 text-lg font-semibold text-black/60">{productName}</p>
+                  <h1 className="mt-4 max-w-2xl text-balance text-[clamp(2.35rem,3.65vw,4.2rem)] font-semibold leading-[1.02] tracking-normal">
                     {title}
                   </h1>
                 </div>
-                <p className="mt-10 max-w-2xl font-serif text-[clamp(1.45rem,2vw,2.35rem)] leading-[1.14] text-[#171717]">
+                <p className="mt-8 max-w-2xl font-serif text-[clamp(1.18rem,1.32vw,1.48rem)] leading-[1.24] text-[#171717]">
                   {subtitle}
                 </p>
               </div>
 
-              <figure className="rounded-[2rem] border border-black/[0.10] bg-[#111111] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] bg-black">
-                  <Image
-                    src={visual.src}
-                    alt={visual.alt}
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 650px, 90vw"
-                    className="object-cover object-top"
-                    style={{ objectPosition: visual.objectPosition ?? 'center top' }}
-                  />
+              <figure className="rounded-[1.6rem] border border-black/[0.10] bg-white p-3 shadow-[0_24px_70px_rgba(0,0,0,0.16)]">
+                <div className="overflow-hidden rounded-[1.15rem]">
+                  <ProductSurface variant={visual.variant} />
                 </div>
-                <figcaption className="flex items-center justify-between gap-4 px-3 py-4 text-sm font-semibold text-white/72">
+                <figcaption className="flex items-center justify-between gap-4 px-3 py-4 text-sm font-semibold text-black/58">
                   <span>{visual.caption}</span>
-                  <span className="rounded-full bg-white px-3 py-1 text-xs uppercase tracking-[0.12em] text-black">
-                    Live product
+                  <span className="rounded-full bg-[#111111] px-3 py-1 text-xs uppercase tracking-[0.12em] text-white">
+                    Product surface
                   </span>
                 </figcaption>
               </figure>
