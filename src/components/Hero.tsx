@@ -11,16 +11,16 @@ const signals = [
 
 export default function Hero() {
   return (
-    <section className="overflow-hidden bg-[#efede4] px-5 pb-14 pt-24 text-[#111111] md:px-6 md:pt-28">
-      <div className="mx-auto grid min-h-[calc(100svh-7rem)] max-w-[1500px] gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div>
-          <p className="mb-7 text-sm font-semibold uppercase tracking-[0.18em] text-[#6d6a62]">
+    <section className="overflow-hidden bg-[#efede4] px-5 pb-16 pt-24 text-[#111111] md:px-6 md:pt-28">
+      <div className="mx-auto grid min-h-[calc(100svh-7rem)] max-w-[1500px] gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center xl:gap-16">
+        <div className="max-w-[780px]">
+          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#6d6a62]">
             DCANNAI Research and Products
           </p>
-          <h1 className="max-w-[900px] text-balance text-[clamp(4.1rem,7.2vw,8.8rem)] font-semibold leading-[0.92] tracking-normal">
-            AI <span className="underline decoration-[0.08em] underline-offset-[0.1em]">research</span> systems across high context domains.
+          <h1 className="text-balance text-[clamp(3.35rem,5.1vw,6.55rem)] font-semibold leading-[0.99] tracking-normal">
+            AI <span className="underline decoration-[0.075em] underline-offset-[0.12em]">research</span> systems for high context domains.
           </h1>
-          <p className="mt-9 max-w-2xl font-serif text-[clamp(1.7rem,2.1vw,2.75rem)] leading-[1.14] tracking-normal text-[#171717]">
+          <p className="mt-8 max-w-[660px] font-serif text-[clamp(1.35rem,1.45vw,1.95rem)] leading-[1.23] tracking-normal text-[#171717]">
             DCANNAI turns applied AI research into products and research programs for chess, schools, preventive health, organic farming, gene therapy, genetic modification, and trading.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
