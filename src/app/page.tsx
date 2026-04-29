@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Stats from '@/components/Stats';
+import Pamphlets from '@/components/Pamphlets';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/contact/ContactForm';
 
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <Pamphlets />
         <Stats />
         <section id="contact" className="bg-[#111111] px-5 py-20 text-white md:px-6 md:py-28">
           <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
