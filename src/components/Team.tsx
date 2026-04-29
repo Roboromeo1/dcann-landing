@@ -13,6 +13,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Adhitya Ram',
     role: 'Founder, DCANNAI',
+    location: 'Australia',
     image: '/media/team/adhitya-ram.jpeg',
     imagePosition: 'center 34%'
   },
@@ -33,30 +34,35 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Balraj Palem',
     role: 'Co founder and Network Engineer',
+    location: 'Australia',
     image: '/media/team/balraj-palem.jpg',
     imagePosition: 'center 35%'
   },
   {
     name: 'Quang Duy',
     role: 'Software Engineer',
+    location: 'Vietnam',
     image: '/media/team/quang-duy.jpeg',
     imagePosition: 'center 24%'
   },
   {
     name: 'Ky Lou',
     role: 'Software Engineer',
+    location: 'Vietnam',
     image: '/media/team/ky-lou.jpeg',
     imagePosition: 'center 24%'
   },
   {
     name: 'Kim N',
     role: 'Software Engineer',
+    location: 'Vietnam',
     image: '/media/team/kim-n.png',
     imagePosition: 'center 16%'
   },
   {
     name: 'Diep Gia Boa',
     role: 'Hardware Engineer',
+    location: 'Vietnam',
     image: '/media/team/diep-gia-boa.jpeg',
     imagePosition: 'center 28%'
   }
