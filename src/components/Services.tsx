@@ -62,10 +62,6 @@ const researchPrograms = [
   {
     name: 'Gene therapy and genetic modification AI',
     detail: 'Research systems for sequence analysis, target discovery, experiment planning, and safety review workflows.'
-  },
-  {
-    name: 'AI trading research',
-    detail: 'Market pattern research, risk controls, strategy simulation, and decision systems for disciplined trading workflows.'
   }
 ];
 
@@ -87,7 +83,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="max-w-2xl text-xl leading-8 text-white/[0.62] lg:ml-auto">
-            These are coded product surfaces from the platforms, with the wider research program extending into organic farming, genetics, and trading.
+            These are coded product surfaces from the platforms, with the wider research program extending into organic farming and genetics.
           </p>
         </div>
 
@@ -121,7 +117,7 @@ export default function Services() {
           />
         </div>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
           {researchPrograms.map((program, index) => (
             <article key={program.name} className="rounded-lg border border-white/[0.10] bg-white/[0.045] p-7">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/[0.42]">
