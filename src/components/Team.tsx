@@ -25,9 +25,10 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Madusudan Padmanaban',
-    role: 'Accounts Executive',
+    role: 'Accounts Manager',
     location: 'India',
-    initials: 'MP'
+    image: '/media/team/madusudan-padmanaban.jpeg',
+    imagePosition: 'center 18%'
   },
   {
     name: 'Balraj Palem',

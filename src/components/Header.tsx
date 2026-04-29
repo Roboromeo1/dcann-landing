@@ -6,7 +6,6 @@ import Link from 'next/link';
 const navItems = [
   { label: 'Research', href: '/#research' },
   { label: 'Products', href: '/#products' },
-  { label: 'Team', href: '/#team' },
   { label: 'BioTrack', href: 'https://biotrack.dcannai.com', external: true },
   { label: 'Chess', href: 'https://chess.dcannai.com', external: true },
   { label: 'Velammal', href: 'https://chess.dcannai.com/s/velammal-chess-academy', external: true },
