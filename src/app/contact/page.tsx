@@ -6,11 +6,11 @@ import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
 
 export const metadata: Metadata = {
-  title: "Contact Us - DCANNAI | Get In Touch",
-  description: "Get in touch with DCANNAI for sustainable AI solutions. Contact our team for trading AI, smart farming, and retail intelligence solutions.",
+  title: "Contact DCANNAI | Product Demos and Partnerships",
+  description: "Contact DCANNAI for chess platform demos, school white label academy partnerships, BioTrack enquiries, farming AI, genetics research, trading AI, and product collaborations.",
   openGraph: {
-    title: "Contact DCANNAI - Sustainable AI Solutions",
-    description: "Ready to transform your business with eco-friendly AI? Get in touch today.",
+    title: "Contact DCANNAI",
+    description: "Talk to DCANNAI about chess, white label academies, BioTrack, farming AI, genetics research, trading AI, and product partnerships.",
     url: "https://dcannai.com/contact",
   },
 };
@@ -21,7 +21,7 @@ export default function Contact() {
       <Header />
       <main>
         <ContactHero />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto px-6 py-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 bg-white px-6 py-20 lg:grid-cols-[1.1fr_0.9fr]">
           <ContactForm />
           <ContactInfo />
         </div>

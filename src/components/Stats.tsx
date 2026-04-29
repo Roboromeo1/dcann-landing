@@ -1,74 +1,52 @@
-'use client';
-import { useState, useEffect, useRef } from 'react';
-
-const stats = [
-  { value: 85, suffix: '%', label: 'Carbon Footprint Reduction', key: 'reduction' },
-  { value: 200, suffix: '+', label: 'Successful Implementations', key: 'implementations' },
-  { value: 50, prefix: '$', suffix: 'M', label: 'Environmental Savings Generated', key: 'savings' },
-  { value: 24, suffix: '/7', label: 'AI-Powered Monitoring', key: 'monitoring' }
+const proofPoints = [
+  {
+    value: '6',
+    label: 'Research domains',
+    detail: 'Chess intelligence, health memory, organic farming, genetics, trading, and institutional deployment'
+  },
+  {
+    value: '3',
+    label: 'Live systems',
+    detail: 'Chess intelligence, academy portals, and BioTrack preventive health'
+  },
+  {
+    value: '130+',
+    label: 'Health markers',
+    detail: 'Biomarker coverage informing the BioTrack intelligence layer'
+  },
+  {
+    value: '1',
+    label: 'Partner portal',
+    detail: 'Velammal Chess Academy validates the school white label model'
+  }
 ];
 
 export default function Stats() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [animatedStats, setAnimatedStats] = useState<Record<string, number>>({
-    reduction: 0,
-    implementations: 0,
-    savings: 0,
-    monitoring: 0
-  });
-  
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-          animateStats();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
-  const animateStats = () => {
-    stats.forEach(stat => {
-      let current = 0;
-      const increment = stat.value / 100;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= stat.value) {
-          current = stat.value;
-          clearInterval(timer);
-        }
-        setAnimatedStats(prev => ({
-          ...prev,
-          [stat.key]: Math.floor(current)
-        }));
-      }, 20);
-    });
-  };
-
   return (
-    <section ref={sectionRef} className="py-20 px-6 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-2xl shadow-blue-500/20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat) => (
-            <div key={stat.key} className="text-center">
-              <h3 className="text-4xl md:text-5xl font-extrabold mb-2">
-                {stat.prefix || ''}
-                {animatedStats[stat.key]}
-                {stat.suffix || ''}
-              </h3>
-              <p className="text-lg md:text-xl opacity-90 font-medium">
-                {stat.label}
+    <section className="bg-[#efede4] px-5 py-20 md:px-6 md:py-28">
+      <div className="mx-auto max-w-[1500px]">
+        <div className="grid gap-10 border-b border-black/[0.12] pb-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+          <div>
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#6d6a62]">
+              Operating model
+            </p>
+            <h2 className="max-w-4xl text-balance text-[clamp(3rem,6vw,7rem)] font-semibold leading-[0.96] tracking-normal text-[#111111]">
+              Small team, real deployments, fast learning.
+            </h2>
+          </div>
+          <p className="max-w-2xl font-serif text-[clamp(1.65rem,2vw,2.6rem)] leading-[1.14] text-[#171717] lg:ml-auto">
+            The best signal comes from real systems. DCANNAI ships focused products, researches new domains, and turns field friction back into research direction.
+          </p>
+        </div>
+
+        <div className="grid border-b border-black/[0.12] md:grid-cols-2 lg:grid-cols-4">
+          {proofPoints.map((item) => (
+            <div key={item.label} className="border-t border-black/[0.12] py-8 md:border-r md:px-7 lg:min-h-[280px] lg:py-10 first:md:pl-0 last:md:border-r-0">
+              <p className="font-serif text-[clamp(4rem,6vw,7rem)] leading-none tracking-normal text-[#111111]">
+                {item.value}
               </p>
+              <h3 className="mt-8 text-xl font-semibold text-[#111111]">{item.label}</h3>
+              <p className="mt-3 max-w-xs text-base leading-7 text-[#5c5952]">{item.detail}</p>
             </div>
           ))}
         </div>
