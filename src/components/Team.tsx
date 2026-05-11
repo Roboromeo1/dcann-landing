@@ -18,13 +18,6 @@ const teamMembers: TeamMember[] = [
     imagePosition: 'center 34%'
   },
   {
-    name: 'Hong Ngoc Diep',
-    role: 'Accounts Manager',
-    location: 'Vietnam',
-    image: '/media/team/hong-ngoc-diep.jpg',
-    imagePosition: 'center 18%'
-  },
-  {
     name: 'Madusudan Padmanaban',
     role: 'Accounts Manager',
     location: 'India',
@@ -37,13 +30,6 @@ const teamMembers: TeamMember[] = [
     location: 'Australia',
     image: '/media/team/balraj-palem.jpg',
     imagePosition: 'center 35%'
-  },
-  {
-    name: 'Quang Duy',
-    role: 'Software Engineer',
-    location: 'Vietnam',
-    image: '/media/team/quang-duy.jpeg',
-    imagePosition: 'center 24%'
   },
   {
     name: 'Ky Lou',
